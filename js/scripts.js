@@ -1,3 +1,14 @@
+var pingpongValidator = function(number) {
+  var num = parseInt(number);
+  if (!isNaN(number)) {
+    return true;
+  }
+  else {
+    alert("Please enter a number");
+    return false;
+  }
+};
+
 var pingPonger = function(number) {
   var num = parseInt(number);
   var result =[];
@@ -18,18 +29,16 @@ var pingPonger = function(number) {
       result.push(numList);
     }
   };
-   return result;
+  return result;
 };
+
 
 $(document).ready(function() {
   $("form#processNumber").submit(function(event) {
     var number = $("input#numberInput").val();
+    var validation = pingpongValidator(number);
     var output = pingPonger(number);
     $("#textOutput").empty().append("<li>" + output.join("</li><li>"));
     (event).preventDefault();
   });
-
-  // $(".btn btn-warning").onClick(function() {
-  //   $("form#processNumber").reset("#textOutput");
-
 });

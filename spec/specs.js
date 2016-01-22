@@ -12,3 +12,8 @@ describe("pingPonger", function() {
     expect(pingPonger(4)).eql([1,2,'ping',4])
   });
 });
+describe("pingpongValidator", function() {
+  it("will return true if input is numerical", function() {
+    expect(pingpongValidator(3)).to.equal(true)
+  });
+});
