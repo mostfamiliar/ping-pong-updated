@@ -43,7 +43,13 @@ $(document).ready(function() {
     }
     else {
       var output = pingPonger(number);
-      $("#textOutput").empty().append("<li>" + output.join("</li><li>"));
+      $("#textOutput").empty();
+      // $("#textOutput").empty().append("<li>" + output.join("</li><li>"));
+      for (var x = 0; x < output.length; x++) {
+        looper = output[x];
+        var $test = $("<li>").text(looper).hide().delay(100*x).fadeIn(300);
+        $('#textOutput').append($test);
+      }
       (event).preventDefault();
     }
 
