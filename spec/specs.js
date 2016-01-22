@@ -3,12 +3,12 @@ describe("pingPonger", function() {
     expect(pingPonger(3)).to.eql([1,2,'ping'])
   });
   it("will replace numbers divisible by 5 with pong", function() {
-    expect(pingPonger(5)).to.eq(["1,2,ping,4,pong"])
+    expect(pingPonger(5)).to.eql([1,2,'ping',4,'pong'])
   });
   it("will replace numbers divisible by 3 and 5 with ping pong", function() {
-    expect(pingPonger(30)).to.equal(["1","2","pingpong"])
+    expect(pingPonger(15)).to.eql([1,2,'ping',4,'pong','ping',7,8,'ping','pong',11,'ping',13,14,'pingpong'])
   });
   it("will leave numbers not divisible by 3 or 5 intact", function() {
-    expect(pingPonger(17)).equal(17)
+    expect(pingPonger(4)).eql([1,2,'ping',4])
   });
 });
