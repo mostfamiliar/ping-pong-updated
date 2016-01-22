@@ -16,6 +16,7 @@
 }
 
 .mid-section {
+  padding: 10px;
   text-align: center;
   color: #FFF;
   font-style: italic;
@@ -25,18 +26,28 @@
 
 }
 
+.has-error .control-label {
+  color: #F06060;
+}
+
 .form-control {
   width: 200px;
   margin: auto;
 }
 
+.has-error .form-control {
+  border-color: #4D4152;
+}
 .output {
-  margin-top: 20px;
+  padding: 10px;
   background-color: #3F4152;
   text-align: center;
+  text-transform: uppercase;
 }
 
 ul {
   color: #FFF;
   list-style-type: none;
+  font-size: 20px;
+  padding: 0;
 }

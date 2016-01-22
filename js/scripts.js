@@ -36,8 +36,10 @@ $(document).ready(function() {
   $("form#processNumber").submit(function(event) {
     var number = $("input#numberInput").val();
     var validation = pingpongValidator(number);
+
     if (!validation) {
-      $(".output").text("Please enter a number!")
+      $(".form-group").attr("class", "form-group has-error has-feedback");
+      (event).preventDefault();
     }
     else {
       var output = pingPonger(number);
