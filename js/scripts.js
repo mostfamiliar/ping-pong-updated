@@ -22,14 +22,14 @@ var pingPonger = function(number) {
 };
 
 $(document).ready(function() {
-  $("form#numeralProcess").submit(function(event) {
+  $("form#processNumber").submit(function(event) {
     var number = $("input#numberInput").val();
     var output = pingPonger(number);
-  //   output = "<ul><li>" + output.join("</li><li>") +
-  // "</li></ul>";
-    //output = output.join(" <br> ");
-    console.log(output);
-    $("#textOutput").append("<li>" + output.join("</li><li>"));
+    $("#textOutput").empty().append("<li>" + output.join("</li><li>"));
     (event).preventDefault();
-  })
+  });
+
+  // $(".btn btn-warning").onClick(function() {
+  //   $("form#processNumber").reset("#textOutput");
+
 });
