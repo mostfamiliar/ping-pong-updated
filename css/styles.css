@@ -1,3 +1,42 @@
+* {
+  border-radius: 0 !important;
+}
+
+.jumbotron {
+  text-align: center;
+  background-color: #8CBEB2;
+  margin-bottom: 0px;
+}
+
+.jumbotron h1 {
+  font-style: italic;
+  font-size: 75px;
+  color: #FFF;
+  text-shadow: 4px 2px #d1d1e0;
+}
+
+.mid-section {
+  text-align: center;
+  color: #FFF;
+  font-style: italic;
+  background-color: #E6C962;
+  height: 300px;
+  margin: auto;
+
+}
+
+.form-control {
+  width: 200px;
+  margin: auto;
+}
+
 .output {
   margin-top: 20px;
+  background-color: #3F4152;
+  text-align: center;
+}
+
+ul {
+  color: #FFF;
+  list-style-type: none;
 }

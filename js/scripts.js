@@ -1,11 +1,10 @@
 var pingpongValidator = function(number) {
   var num = parseInt(number);
-  if (!isNaN(number)) {
-    return true;
+  if (isNaN(number)) {
+    return false;
   }
   else {
-    alert("Please enter a number");
-    return false;
+    return true;
   }
 };
 
@@ -37,8 +36,14 @@ $(document).ready(function() {
   $("form#processNumber").submit(function(event) {
     var number = $("input#numberInput").val();
     var validation = pingpongValidator(number);
-    var output = pingPonger(number);
-    $("#textOutput").empty().append("<li>" + output.join("</li><li>"));
-    (event).preventDefault();
+    if (!validation) {
+      $(".output").text("Please enter a number!")
+    }
+    else {
+      var output = pingPonger(number);
+      $("#textOutput").empty().append("<li>" + output.join("</li><li>"));
+      (event).preventDefault();
+    }
+
   });
 });
