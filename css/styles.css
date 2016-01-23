@@ -31,6 +31,10 @@ body{
 
 }
 
+.jumbotron p {
+  margin-top: 10px;
+}
+
 .has-error .control-label {
   color: #F06060;
 }
@@ -39,7 +43,9 @@ body{
   width: 200px;
   margin: auto;
 }
-
+.glyphicon-heart {
+  font-size: 20px;
+}
 .has-error .form-control {
   border-color: #4D4152;
 }
