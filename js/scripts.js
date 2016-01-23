@@ -33,8 +33,8 @@ var pingPonger = function(number) {
 
 
 $(document).ready(function() {
-  $("h1").mouseover(function() {
-  $("h1").effect("bounce", {distance: 10, times: 1},"slow")
+  $("#bounce-fix").mouseover(function() {
+  $("#bounce-fix").effect("bounce", {distance: 10, times: 1},"slow")
   });
 
   $("form#processNumber").submit(function(event) {
